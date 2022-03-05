@@ -1,20 +1,20 @@
 <Command>
     size_hint_y: None
-    pos_hint: {"right": .98}
+    pos_hint: {"right": .88}
     height: self.texture_size[1]
     padding: 12, 10
     theme_text_color: "Custom"
     text_color: 1, 1, 1, 1
     canvas.before:
         Color:
-            rgb: (1, 170/255, 23/255, 1)
+            rgb: (0, 0.8, 1, 0.8)
         RoundedRectangle:
             size: self.width, self.height
             pos: self.pos
             radius: [23, 23, 0, 23]
 <Response>
     size_hint_y: None
-    pos_hint: {"x": .02}
+    pos_hint: {"x": .12}
     height: self.texture_size[1]
     padding: 12, 10
     canvas.before:
@@ -46,7 +46,7 @@ MDScreen:
         pos: self.pos
         size: self.size
         source: 'bg2.jpeg'
-    # MDFloatLayout:
+    MDFloatLayout:
     #     MDFloatLayout:
     #         md_bg_color: 245/255, 245/255, 245/255, 1
     #         size_hint_y: .11
@@ -62,7 +62,7 @@ MDScreen:
     #             text_color: 53/255, 56/255, 60/255, 1
         ScrollView:
             size_hint_y: .77
-            pos_hint: {"x": 0, "y": .116}
+            pos_hint: {"x": 0, "y": .08}
             do_scroll_x: False
             do_scroll_y: True
             BoxLayout:
@@ -76,7 +76,9 @@ MDScreen:
                 spacing: 5
         MDFloatLayout:
             md_bg_color: 245/255, 245/255, 245/255, 1
-            size_hint_y: .11
+            size_hint_x: .7
+            size_hint_y: .09
+            pos_hint: {"center_x": .5, "center_y": .13}
             MDFloatLayout:
                 size_hint: .8, .75
                 pos_hint: {"center_x": .43, "center_y": .5}
